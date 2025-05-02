@@ -39,7 +39,7 @@ function truncate(text, maxLength) {
         <div class="grid grid-cols-1 gap-8 md:grid-cols-1 xl:grid-cols-2">
 
         {posts.map(post => 
-            <a href={`/perspectiva/${post.id}`}>
+            <a href={`/bitacora/perspectiva/${post.id}`}>
                 <div class="max-w-sm w-full lg:max-w-full h-full max-h-[200px] lg:flex border border-gray-200 rounded-lg shadow-sm dark:border-gray-900">
                     <div class="hidden md:block h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
                         <Image src={post.data.image.path} class="w-full h-full object-cover object-center" alt={post.data.image.alt}/>
