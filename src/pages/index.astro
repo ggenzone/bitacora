@@ -1,25 +1,107 @@
 ---
 import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+import MainLayout from '../layouts/main.astro';
+import { Image } from 'astro:assets';
+import perspecticaImage from '../assets/img/perspectiva.png';
+import prototipoImage from '../assets/img/prototipo.png';
+import decadenciaImage from '../assets/img/decadencia.png';
+import herbrandImage from '../assets/img/herbrand.png';
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+const pageTitle = "Bitacoras";
 ---
+<MainLayout title={pageTitle} home={false}>              
+  <section class="pt-26.25">
+    <div class="container px-6 py-10 mx-auto">
+        <div class="text-center">
+            <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+              Bitacoras
+            </h1>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+            <p class="max-w-lg mx-auto mt-4 text-gray-500">
+              Estas bitacoras funcionan como un cuaderno de notas personal.
+            </p>
+        </div>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+          <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
+              <div>
+                  <Image class="relative z-10 object-cover w-full rounded-md h-96" src={perspecticaImage} alt="" />
+
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                      <a href="/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+                          Perspectiva
+                      </a>
+
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        Aquí recopilo y organizo ideas, conceptos y explicaciones relacionadas con finanzas, economía y temas afines.
+                      </p>
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        La intención no es enseñar, sino aprender en voz alta, registrando lo que estudio, leo o escucho.
+                      </p>
+
+                      <p class="mt-3 text-sm text-blue-500">Acceder</p>
+                  </div>
+              </div>
+
+              <div>
+                  <Image class="relative z-10 object-cover w-full rounded-md h-96" src={prototipoImage} alt=""/>
+
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                      <a href="/prototipo" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+                          Prototipo
+                      </a>
+
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        Este es mi espacio para documentar lo que aprendo haciendo: software, electrónica, IoT, impresión 3D y más. 
+                      </p>
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        No es un manual ni un portfolio; es un laboratorio de apuntes en proceso.
+                      </p>
+
+                      <p class="mt-3 text-sm text-blue-500">Acceder</p>
+                  </div>
+              </div>
+
+
+                <div>
+                  <Image class="relative z-10 object-cover w-full rounded-md h-96" src={decadenciaImage} alt="" />
+
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                      <a href="/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+                          Decadencia
+                      </a>
+
+
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        Aquí escribo mientras intento entender la armonía, la estructura y la emoción detrás de la música. 
+                      </p>
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm"> 
+                        Este blog es parte de mi aprendizaje, no una lección: es un lugar donde me pierdo entre acordes, escalas, ideas y a veces incluso silencio.
+                      </p>
+
+                      <p class="mt-3 text-sm text-blue-500">Acceder</p>
+                  </div>
+              </div>
+
+
+              <div>
+                  <Image class="relative z-10 object-cover w-full rounded-md h-96" src={herbrandImage} alt="" />
+
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                      <a href="/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+                          Herbrand
+                      </a>
+
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+Este espacio es mi cuaderno mental, donde intento comprender cómo funciona el universo a través de la física, las matemáticas y la ciencia en general.
+                      </p>
+                      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                         Escribo para entender, para equivocarme y volver a intentar. No enseño, simplemente pienso en voz alta con ayuda de GPT.
+                      </p>
+
+                      <p class="mt-3 text-sm text-blue-500">Acceder</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</MainLayout>

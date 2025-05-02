@@ -1,0 +1,25 @@
+---
+import MainLayout from '../../layouts/main.astro';
+
+export async function getStaticPaths() {
+  const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+  
+  return [
+    {params: {tag: "economía"}, props: {posts: allPosts}},
+    {params: {tag: "finanzas"}, props: {posts: allPosts}},
+    {params: {tag: "ahorro"}, props: {posts: allPosts}},
+    {params: {tag: "blogging"}, props: {posts: allPosts}},
+    {params: {tag: "setbacks"}, props: {posts: allPosts}},
+    {params: {tag: "learning in public"}, props: {posts: allPosts}}
+  ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
+---
+<MainLayout pageTitle={tag}>
+  <ul>
+    {filteredPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
+</MainLayout>

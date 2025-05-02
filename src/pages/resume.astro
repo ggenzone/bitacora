@@ -1,0 +1,206 @@
+---
+import '../styles/global.css';
+// Component Imports
+import Navigation from '../components/Navigation.astro';
+
+---
+
+<html lang="en" class="print:text-[11px]">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + TailwindCSS</title>
+	</head>
+
+	<body>
+    <div>
+      <div class="mb-24 mt-6 flex flex-col items-center justify-center px-6">
+        <div class="flex w-full max-w-4xl flex-col gap-36 print:gap-10">
+        <Navigation />
+<div class="flex flex-col gap-6 print:mt-10 print:gap-2"><h1 class="text-3xl md:text-6xl" style="font-variation-settings: 'wdth' 125;"><span class="font-black">Guido</span>
+    <span class="font-extralight">Genzone</span></h1>
+  <h2 class="md:text-xl">Software engineer</h2></div>
+
+<div class="flex flex-col gap-16 print:gap-6 lg:gap-6"><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-start-2 lg:col-span-3 lg:col-start-2"><h2 class="text-2xl font-bold text-blue-600">Experience</h2></div></div>
+
+    <div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Mar 2024 – Present
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Senior Software Engineer</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://bodycad.com" target="_blank" rel="noreferrer nofollow">Bodycad</a>
+            
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Full-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>Bodycad enables orthopedic surgeons to create a personalized restoration based on the anatomical specifications of their patient using the company's proprietary Personalized Restoration Software.
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Designed and developed web application based on NestJS / ReactJS / TypeScript.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Feb 2020 – Feb 2024
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Senior Software Engineer</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://www.netapp.com" target="_blank" rel="noreferrer nofollow">NetApp</a>
+            
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Remote contractor
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>NetApp, Inc. is an American hybrid cloud data services and data management company. Working in the Product Documentation &amp; Business Process Automation deparment I worked developing the following tools
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Continuous Integration and Deployment
+              </li><li class="[&amp;_a]:underline">Content site generation (Ruby - Javascript - HTML - CSS).
+              </li><li class="[&amp;_a]:underline">Automatic PDF generation (Ruby - Javascript - HTML - CSS).
+              </li><li class="[&amp;_a]:underline">Automatic content translation using NMT (Ruby).
+              </li><li class="[&amp;_a]:underline">Developed a ChatBot using OpenAI / Azure Cognitive Search (TypeScript / Python).
+              </li><li class="[&amp;_a]:underline">Developed GitHub Apps using Probot framework (TypeScript).
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Feb 2020 – Feb 2024
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Senior Software Engineer</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://www.thesinapiteam.com/" target="_blank" rel="noreferrer nofollow">Sinapi</a>
+            
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Remote contractor
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>SaaS Management Software for translation agencies
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Designed and developed web application based on Symfony framework.
+              </li><li class="[&amp;_a]:underline">Designed and developed a frontend based on ReactJS.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Ago 2017 – Oct 2021
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Co-founder</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://www.beerapp.net" target="_blank" rel="noreferrer nofollow">BeerApp</a>
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Full-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>Management Software for Craft Breweries together with another co-founder, we designed and developed craft brewery management software from the ground up
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Designed and developed web application based on Symfony framework.
+              </li><li class="[&amp;_a]:underline">Designed and developed mobile application based on ReactNative + Expo.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Ago 2013 – Ago 2020
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Senior Software Engineer</h2>
+          <span class="[&amp;_a]:underline">at
+              Ministry of Health of Santa Fe (Argentina)
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Full-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3">
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Designed and developed an emergency medical services software that provides information management tools for ambulance and hospitals.
+              </li><li class="[&amp;_a]:underline">Designed and developed web application based on Symonfy.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Ago 2013 – Mar 2014
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">PHP Developer</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://socialengine.com/" target="_blank" rel="noreferrer nofollow">SocialEngine</a> / USA
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Remote contractor
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>SocialEngine PHP, a white label social network software solution.
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Developed web application based on Zend framework.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Sep 2011 – Apr 2012
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">EasyCrypt intership</h2>
+          <span class="[&amp;_a]:underline">at
+              <a href="https://software.imdea.org/" target="_blank" rel="noreferrer nofollow">IMDEA Software Institute</a>
+            (Madrid, Spain)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Full-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>EasyCrypt is a toolset for reasoning about relational properties of probabilistic computations with adversarial code. Its main application is the construction and verification of game-based cryptographic proofs.
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Developed UI based on ProofGeneral for Emacs (elisp).
+              </li><li class="[&amp;_a]:underline">Developed backtrack feature for proofs (OCaml).
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Jun 2008 – Dec 2011
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Senior C/C++ Developer</h2>
+          <span class="[&amp;_a]:underline">at
+              Accenture
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Full-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>Accenture is a multinational professional services company where I began my career as a junior C/C++ developer. I worked my way up to the position of senior developer before leaving the company. While at Accenture, I worked on Telefónica España Billing System.
+            </p>
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Development and maintenance of C functionalities in Unix environments.
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">2008
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Undergraduate Teaching Assistant in Programming language analysis II</h2>
+          <span class="[&amp;_a]:underline">at
+              Universidad Nacional de Rosario
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Part-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3">
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Functional Programming
+              </li>
+          </ul></div>
+      </div><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">2007
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">Undergraduate Teaching Assistant in Discrete Mathematics</h2>
+          <span class="[&amp;_a]:underline">at
+              Universidad Nacional de Rosario
+            (Rosario, Argentina)
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60">Part-time
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3">
+          <ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Discrete Mathematics, Functional Programming, C Programming
+              </li>
+          </ul></div>
+      </div></div>
+
+<div class="flex flex-col gap-16 print:gap-6 lg:gap-6"><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-start-2 lg:col-span-3 lg:col-start-2"><h2 class="text-2xl font-bold text-blue-600">Education</h2></div></div>
+
+    <div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:text-right lg:text-right"><span class="text-black/60">Jan 2006 –
+          </span></div>
+        <div class="print:col-span-3 lg:col-span-3"><h2 class="inline font-bold">M.Sc. Degree in Computer Science</h2>
+          <span>at
+            Universidad Nacional de Rosario
+          </span></div>
+        <div class="print:text-right lg:text-right"><span class="text-sm text-black/60"></span></div>
+        <div class="print:col-span-3 lg:col-span-3"><p>Argentina
+          </p></div>
+      </div></div>
+
+<div class="flex flex-col gap-16 print:gap-6 lg:gap-6"><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-span-3 print:col-start-2 lg:col-span-3 lg:col-start-2"><h2 class="text-2xl font-bold text-blue-600">Skills and Tech Stack</h2></div></div>
+
+    <div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-span-3 print:col-start-2 lg:col-span-3 lg:col-start-2"><ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li>Languages: PHP, JavaScript,C ,Ruby, TypeScript, Haskell, Ocaml
+            </li><li>Frameworks: Symfony, Zend, Probot
+            </li><li>Libraries: ReactJS, Tailwind, ReactNative
+            </li><li>Tools: Docker, Markdown, MySQL, Postgres, MongoDB
+            </li></ul></div></div></div>
+
+<div class="flex flex-col gap-16 print:gap-6 lg:gap-6"><div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-span-3 print:col-start-2 lg:col-span-3 lg:col-start-2"><h2 class="text-2xl font-bold text-blue-600">Contact Info</h2></div></div>
+
+    <div class="grid items-baseline gap-x-10 print:grid-cols-4 lg:grid-cols-4"><div class="print:col-span-3 print:col-start-2 lg:col-span-3 lg:col-start-2"><ul class="mx-5 my-2 flex list-disc flex-col gap-1 text-sm"><li class="[&amp;_a]:underline">Linkedin: <a href="https://linkedin.com/in/guido-genzone-01a274179/" target="_blank" rel="noreferrer nofollow">linkedin.com/in/guido-genzone-01a274179</a>
+            </li><li class="[&amp;_a]:underline">Github: <a href="https://github.com/ggenzone" target="_blank" rel="noreferrer nofollow">github.com/ggenzone</a>
+            </li><li class="[&amp;_a]:underline">Location: Alicante, Spain 
+            </li></ul></div></div></div></div></div>
+
+</div>
+	</body>
+</html>

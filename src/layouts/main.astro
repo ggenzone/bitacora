@@ -1,6 +1,20 @@
 ---
 import '../styles/global.css';
-const { content } = Astro.props;
+import Navigation from '../components/Navigation.astro';
+
+
+interface Props {
+  title: string;
+  home: boolean;
+  page: string;
+}
+
+const { title, home } = Astro.props;
+
+const squareStyle = ' bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]'
+const square2Style = 'border-x bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] border-x-(--pattern-fg)  bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10'
+
+const lineStyle = 'border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10'
 ---
 
 <html lang="en">
@@ -8,9 +22,16 @@ const { content } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
+		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	  <body class={`antialiased dark:bg-black ${square2Style}`}>
+      <div class="mx-auto ">
+
+      <Navigation/>
+
+      <div class="min-h-dvh">
+		    <slot />
+	    </div>
+		</div>
 	</body>
 </html>
