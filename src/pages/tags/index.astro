@@ -1,0 +1,14 @@
+---
+import MainLayout from '../../layouts/main.astro';
+const allPosts = Object.values(import.meta.glob('../perspectiva/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const pageTitle = "Tag Index";
+---
+
+<MainLayout title="Tags">
+  <div>
+    {tags.map((tag) => (
+      <p><a href={`/bitacora/tags/${tag}`}>{tag}</a></p>
+    ))}
+  </div>
+</MainLayout>

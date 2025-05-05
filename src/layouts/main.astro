@@ -1,37 +1,73 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
-
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
   home: boolean;
   page: string;
+  description?: string;
+  image?: string;
+  url?: string;
 }
 
-const { title, home } = Astro.props;
+const { title, home, description, image, url } = Astro.props;
 
-const squareStyle = ' bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]'
-const square2Style = 'border-x bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] border-x-(--pattern-fg)  bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10'
-
-const lineStyle = 'border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10'
+const squareStyle = ' bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]';
+const square2Style = 'border-x bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] border-x-(--pattern-fg)  bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 dark:[--pattern-fg:var(--color-white)]/10';
+const lineStyle = 'border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5  dark:[--pattern-fg:var(--color-white)]/10';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	  <body class={`antialiased dark:bg-black ${square2Style}`}>
-      <div class="mx-auto ">
+  <head>
 
-      <Navigation/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta
+		name="viewport"
+		content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+	>
 
+
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content={description || 'Default description for the website.'} />
+    <meta name="author" content="Your Name or Organization" />
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={home ? 'website' : 'article'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description || 'Default description for the website.'} />
+    <meta property="og:image" content={image || '/default-og-image.png'} />
+    <meta property="og:url" content={url || 'https://yourwebsite.com'} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description || 'Default description for the website.'} />
+    <meta name="twitter:image" content={image || '/default-twitter-image.png'} />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css">
+
+  </head>
+  <body class={`antialiased dark:bg-zinc-900 ${lineStyle}`}>
+    <div class="mx-auto">
+      <Navigation />
       <div class="min-h-dvh">
-		    <slot />
-	    </div>
-		</div>
-	</body>
+        <slot />
+      </div>
+      <Footer />
+    </div>
+  </body>
 </html>

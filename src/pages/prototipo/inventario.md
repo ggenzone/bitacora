@@ -1,0 +1,4 @@
+---
+export const title = 'My first MDX post'
+---
+# {title}

@@ -1,0 +1,1 @@
+const darkColor = "bg-neutral-800" // "bg-zinc-950"

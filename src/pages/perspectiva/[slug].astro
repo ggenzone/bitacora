@@ -1,0 +1,23 @@
+---
+import MarkdownPostLayout from '../../layouts/post.astro';
+import { getCollection, render } from 'astro:content';
+import { Debug } from 'astro:components';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('perspectiva');
+  return posts.map(post => ({
+    params: { slug: post.id }, props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<MarkdownPostLayout 
+  frontmatter={post.data}
+  headings={post.rendered.metadata.headings} 
+  url={`/bitacora/perspectiva/${post.id}`}
+>
+  <Content />
+</MarkdownPostLayout>

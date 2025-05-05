@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+const displayDate = (date) => {
+    return (
+        new Date(date).toLocaleDateString('es-ES', {
+            weekday: 'long', // 'short' o omite para no mostrar
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        })
+    )
+}
+
+const { frontmatter } = Astro.props
+---
+
+<p class="flex items-center gap-2 font-mono text-xs/6 font-medium tracking-widest text-gray-600 uppercase dark:text-gray-400" data-section="true">{displayDate(frontmatter.date)}</p>
+<h1 data-title="true" class="mt-2 text-3xl font-medium tracking-tight text-gray-950 dark:text-white">{frontmatter.title}</h1>
+
+
+{frontmatter.image && (
+    <div class="not-prose relative overflow-hidden rounded-xl h-[400px] mt-4 mb-4">
+    <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-slate-950/10 ring-inset dark:ring-white/10"></div>
+    <Image alt={frontmatter.image.alt} loading="lazy" class="h-[400px] w-full object-none" data-nimg="1"  
+        src={frontmatter.image.path}
+    />
+    </div>
+)}
+
+{/*
+    <div class="tags">
+    {frontmatter.tags.map((tag: string) => (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    ))}
+    </div>
+*/}

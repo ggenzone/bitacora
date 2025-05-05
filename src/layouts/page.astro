@@ -1,0 +1,21 @@
+---
+import MainLayout from './main.astro';
+const { pageTitle } = Astro.props
+---
+
+<MainLayout title={pageTitle}>
+    <section class="bg-white dark:bg-neutral-800">
+        <div class="grid lg:grid-cols-[2.5rem_minmax(0,1fr)_2.5rem] 
+                         xl:grid-cols-[2.5rem_minmax(0,1fr)_2.5rem]  ">
+        <div class="col-start-1 row-span-5 row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10"></div>
+
+        <div class="relative row-start-1 grid grid-cols-subgrid lg:col-start-2">
+            <div class="container px-6 py-10 mx-auto  pt-26.25 ">
+                <slot />
+            </div>
+        </div>
+
+        <div class="col-start-3 row-span-5 row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10"></div>
+        </div>
+    </section>
+</MainLayout>

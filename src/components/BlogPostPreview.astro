@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  post: object;
+  url: string;
+}
+
+function truncate(text, maxLength) {
+  return text.length > maxLength
+    ? text.slice(0, maxLength).trim().replace(/\s+\S*$/, '') + '...'
+    : text;
+}
+
+const displayDate = (date) => {
+
+    return (
+        new Date(date).toLocaleDateString('es-ES', {
+            weekday: 'long', // 'short' o omite para no mostrar
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        })
+    )
+}
+
+
+const { post, url } = Astro.props;
+---
+
+<a href={url}>
+    <div class="max-w-sm w-full lg:max-w-full h-full max-h-[200px] lg:flex border border-gray-200 rounded-lg shadow-sm dark:border-zinc-700">
+        <div class="hidden lg:block h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+            <Image src={post.data.image.path} class="w-full h-full object-cover object-center" alt={post.data.image.alt}/>
+        </div>
+        <div class="p-4 flex flex-col justify-between leading-normal">
+            <div class="mb-8">
+                <p class="text-sm text-gray-600 flex items-center text-blue-500 mb-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10.5 17a1 1 0 0 1-.71-.29a1 1 0 0 1 0-1.42L13.1 12L9.92 8.69a1 1 0 0 1 0-1.41a1 1 0 0 1 1.42 0l3.86 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-.7.32"/></svg>
+                    {post.data.categories[0]} / {post.data.categories[1]}
+                </p>
+            <div class="text-gray-900 font-semibold text-sm mb-2 dark:text-white">{post.data.title}</div>
+            <p class="text-gray-700 text-sm text-gray-500 dark:text-white">
+            {truncate(post.body || '', 100)}
+            </p>
+            </div>
+            <p class="flex text-sm justify-end text-gray-600 dark:text-white">{displayDate(post.data.date)}</p>
+        </div>
+    </div>
+</a>

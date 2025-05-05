@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import MainLayout from '../layouts/main.astro';
+import MainLayout from '../layouts/page.astro';
 import { Image } from 'astro:assets';
 import perspecticaImage from '../assets/img/perspectiva.png';
 import prototipoImage from '../assets/img/prototipo.png';
@@ -10,8 +10,8 @@ import herbrandImage from '../assets/img/herbrand.png';
 const pageTitle = "Bitacoras";
 ---
 <MainLayout title={pageTitle} home={false}>              
-  <section class="pt-26.25">
-    <div class="container px-6 py-10 mx-auto">
+  <div class="w-full h-full">
+
         <div class="text-center">
             <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
               Bitacoras
@@ -26,7 +26,7 @@ const pageTitle = "Bitacoras";
               <div>
                   <Image class="relative z-10 object-cover w-full rounded-md h-96" src={perspecticaImage} alt="" />
 
-                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-zinc-900 shadow-sm dark:border-zinc-700 dark:border-1">
                       <a href="/bitacora/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
                           Perspectiva
                       </a>
@@ -45,7 +45,7 @@ const pageTitle = "Bitacoras";
               <div>
                   <Image class="relative z-10 object-cover w-full rounded-md h-96" src={prototipoImage} alt=""/>
 
-                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-zinc-900 shadow-sm dark:border-zinc-700 dark:border-1">
                       <a href="/bitacora/prototipo" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
                           Prototipo
                       </a>
@@ -65,7 +65,7 @@ const pageTitle = "Bitacoras";
                 <div>
                   <Image class="relative z-10 object-cover w-full rounded-md h-96" src={decadenciaImage} alt="" />
 
-                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-zinc-900 shadow-sm dark:border-zinc-700 dark:border-1">
                       <a href="/bitacora/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
                           Decadencia
                       </a>
@@ -86,8 +86,8 @@ const pageTitle = "Bitacoras";
               <div>
                   <Image class="relative z-10 object-cover w-full rounded-md h-96" src={herbrandImage} alt="" />
 
-                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-                      <a href="/bitacora/perspectiva" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
+                  <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-zinc-900 shadow-sm dark:border-zinc-700 dark:border-1">
+                      <a href="/bitacora/herbrand" class="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl">
                           Herbrand
                       </a>
 
@@ -102,6 +102,5 @@ Este espacio es mi cuaderno mental, donde intento comprender cómo funciona el u
                   </div>
               </div>
           </div>
-      </div>
-  </section>
+  </div>
 </MainLayout>
