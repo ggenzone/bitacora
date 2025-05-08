@@ -6,6 +6,7 @@ tags: [Nixon, tipo de cambio, historia económica]
 image:
   path: ../../assets/img/posts/nixon_shock.webp
   alt: Richard Nixon junto a su secretario del Tesoro, John Connally
+description: "Descubre el impacto del Nixon Shock en el sistema monetario internacional y sus consecuencias históricas."
 ---
 
 > 🪙 La decisión de Nixon en 1971 de cerrar la “ventana del oro” marcó el principio del fin para el sistema de Bretton Woods. Pero el colapso no fue instantáneo: los países atravesaron un proceso de adaptación que rediseñó el orden monetario internacional.

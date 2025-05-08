@@ -2,6 +2,7 @@
 import MarkdownPostLayout from '../../layouts/post.astro';
 import { getCollection, render } from 'astro:content';
 import { Debug } from 'astro:components';
+import { sidebar } from '../../data/prototipo-menu.ts'
 
 export async function getStaticPaths() {
   const posts = await getCollection('prototipo');
@@ -18,7 +19,8 @@ const frontmatter = post.data;
 <MarkdownPostLayout 
   frontmatter={post.data}
   headings={post.rendered.metadata.headings} 
-  url={`/bitacora/perspectiva/${post.id}`}
+  url={`/bitacora/prototipo/${post.id}`}
+  sidebar={sidebar}
 >
   <Content />
 </MarkdownPostLayout>

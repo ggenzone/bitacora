@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/crisis-sudeste-asiatico-1997.png
   alt: Crisis sudeste asiático 1997
+description: "Explora la crisis del sudeste asiático de 1997 y sus lecciones para la economía global."
 ---
 
 > 🌏 La crisis del sudeste asiático de 1997 fue uno de los episodios financieros más impactantes de la historia reciente, con efectos globales y lecciones que aún resuenan en los mercados emergentes.

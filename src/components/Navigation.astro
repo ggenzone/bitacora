@@ -1,19 +1,92 @@
 ---
-import { Icon } from 'astro-icon/components'
+import logoImage from "../assets/img/avatar.png";
+import darkLogo from "../assets/img/avatar.png";
+import { Image } from "astro:assets";
+
+interface Menu {
+  label: string;
+  href: string;
+  external?: boolean;
+  badge?: string;
+}
+const leftmenu: Menu[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
+
 ---
 
-<!-- Menu -->
-<div class="fixed inset-x-0 top-0 z-10 border-b border-gray-950/5 dark:border-white/10 print:hidden flex items-center justify-center w-full bg-white dark:bg-neutral-800">
 
-    <div class="flex items-center gap-10 print:hidden gap-8">
+<!-- Menu -->
+<nav class="ixed inset-x-0 top-0 z-100 border-b border-gray-950/5 dark:border-white/10 print:hidden flex flex-wrap justify-between md:gap-10 md:flex-nowrap w-full bg-white dark:bg-neutral-800">
+
+    <div class="container mx-auto flex flex-wrap justify-between md:gap-10 md:flex-nowrap w-full" >
+    <div class="flex items-center justify-between w-full md:w-auto">
         <a class="text-sm py-1 border-b-transparent border-b-2 hover:border-blue-600 content-center px-4 h-14 dark:text-white" href="/bitacora">Home</a>
+        <button
+          id="menu"
+          aria-label="Toggle Menu"
+          class="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-blue-500 focus:outline-none dark:text-gray-300">
+          <svg
+            class="w-6 h-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path
+              class="navmenu-toggle"
+              fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+            ></path>
+
+            <path
+              class="navmenu-toggle hidden"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+            ></path>
+          </svg>
+        </button>
+    </div>
+    <div class="items-center gap-10 print:hidden gap-8 hidden md:flex md:flex-row md:justify-end">
+        
         <a class="text-sm py-1 border-b-transparent border-b-2 hover:border-blue-600 content-center px-4 h-14 dark:text-white" href="/bitacora/perspectiva">Perspectiva</a>
         <a class="text-sm py-1 border-b-transparent border-b-2 hover:border-blue-600 content-center px-4 h-14 dark:text-white" href="/bitacora/prototipo">Prototipo</a>
         <a class="text-sm py-1 border-b-transparent border-b-2 hover:border-blue-600 content-center px-4 h-14 dark:text-white" href="/bitacora/bibliografia">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20.62 4.22a1 1 0 0 0-.84-.2L12 5.77L4.22 4A1 1 0 0 0 3 5v12.2a1 1 0 0 0 .78 1l8 1.8h.44l8-1.8a1 1 0 0 0 .78-1V5a1 1 0 0 0-.38-.78M5 6.25l6 1.35v10.15L5 16.4ZM19 16.4l-6 1.35V7.6l6-1.35Z"/></svg>
         </a>
-
     </div>
-
-</div>
+    <div class="navmenu-toggle hidden">
+      <div
+        class="flex flex-col justify-start order-2 w-full md:hidden">
+        <a href="/bitacora/perspectiva" class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+            Perspectiva
+        </a>
+        <a href="/bitacora/prototipo" class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+            Prototipo
+        </a>
+        <a href="/bitacora/herbrand" class="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+            Herbrand
+        </a>
+      </div>
+    </div>
+    </div>
+</nav>
 <!-- Menu -->
+
+<script is:inline>
+  const menuButton = document.getElementById("menu");
+  menuButton.addEventListener("click", () => {
+    [...document.querySelectorAll(".navmenu-toggle")].forEach((Element) => {
+      Element.classList.toggle("hidden");
+    });
+  });
+</script>

@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/renta-fija.png
   alt: Renta fija
+description: "Explora qué es la renta fija, sus características, ventajas y cómo se diferencia de la renta variable."
 ---
 
 > 💵 La renta fija es una de las formas más tradicionales de inversión, clave para gobiernos, empresas e inversores. Entender sus características, riesgos y jerarquía de pago es fundamental para tomar buenas decisiones financieras.

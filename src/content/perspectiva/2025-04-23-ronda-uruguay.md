@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/ronda-uruguay.png
   alt: Ronda de Uruguay
+description: "Explora la Ronda de Uruguay, un hito en el comercio internacional que dio origen a la OMC."
 ---
 
 > 🌐 La Ronda de Uruguay fue un hito en la historia del comercio internacional. No solo modernizó las reglas del intercambio global, sino que también dio origen a la Organización Mundial del Comercio (OMC).

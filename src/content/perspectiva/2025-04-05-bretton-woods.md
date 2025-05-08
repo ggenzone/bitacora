@@ -6,6 +6,7 @@ tags: [bretton woods, fmi, banco mundial, patrón oro, sistema monetario]
 image:
   path: ../../assets/img/posts/bretton-woods-header.png
   alt: Reunión internacional en Bretton Woods, 1944
+description: "Conferencia histórica que estableció el sistema financiero internacional tras la Segunda Guerra Mundial."
 ---
 
 ## Los Acuerdos

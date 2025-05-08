@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/mercados-mundo.png
   alt: Mercados financieros globales
+description: "Explora los mercados financieros globales y su impacto en la economía mundial."
 ---
 
 > 🌐 Los mercados financieros son el corazón de la economía global, donde se negocian activos, se forman precios y se canaliza el ahorro hacia la inversión. Pero ¿qué es realmente un mercado? ¿Cuáles son los más relevantes y cómo se diferencian de los índices?

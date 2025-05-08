@@ -8,15 +8,16 @@ const blogCollection = (folder: string) => defineCollection({
     image: z.object({
         path: image(),
         alt: z.string(),
-    }),
+    }).optional(),
     //url: z.string(),
     author: z.string().default('Guido'),
-    tags: z.array(z.string()),
-    categories: z.array(z.string()),
+    tags: z.array(z.string()).optional(),
+    categories: z.array(z.string()).optional(),
     date: z.coerce.date(),
-    excerpt: z.string().optional()
+    description: z.string().optional(),
     //canonicalURL: z.string().url(),
     //date: z.string().transform((str) => new Date(str)),
+    visible: z.boolean().default(true)
   }),
 });
 
@@ -26,7 +27,7 @@ const herbrandCollection = blogCollection('herbrand')
 
 
 export const collections = {
-  prototivo: prototipoCollection,
+  prototipo: prototipoCollection,
   perspectiva: perspectivaCollection,
   herbrand: herbrandCollection
 };

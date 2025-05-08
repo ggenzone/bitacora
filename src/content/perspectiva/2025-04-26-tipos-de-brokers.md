@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/tipos-de-brokers.png
   alt: Tipos de brokers
+description: "Descubre los diferentes tipos de brokers y cómo elegir el adecuado para tus inversiones."
 ---
 
 > 🏦 Elegir el broker adecuado es una de las decisiones más importantes para cualquier inversor o trader. Los brokers actúan como intermediarios entre los mercados financieros y los usuarios, pero no todos funcionan de la misma manera.

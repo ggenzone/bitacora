@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/renta-variable.png
   alt: Renta variable
+description: "Descubre qué es la renta variable, sus características, riesgos y oportunidades en los mercados financieros."
 ---
 
 > 📈 La renta variable es uno de los pilares de los mercados financieros y una de las formas más populares de inversión. ¿Qué la hace diferente de la renta fija? ¿Cuáles son sus riesgos y ventajas?

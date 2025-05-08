@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/curva-rendimiento-invertida.png
   alt: Curva de rendimiento invertida
+description: "Descubre qué es la curva de rendimiento invertida y su relación con las recesiones económicas."
 ---
 
 > 📉 Una curva de rendimiento invertida suele ser vista como una señal de advertencia en los mercados financieros. Pero, ¿qué es exactamente y por qué genera tanta atención?

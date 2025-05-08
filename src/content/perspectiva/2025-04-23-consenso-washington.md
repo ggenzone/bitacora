@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/consenso-washington.png
   alt: Consenso de Washington
+description: "Un análisis del Consenso de Washington y su influencia en las políticas económicas globales."
 ---
 
 > 🌎 El "Consenso de Washington" marcó una época en la historia económica latinoamericana y global. ¿Qué fue, cuáles eran sus ideas principales y por qué sigue generando debate?

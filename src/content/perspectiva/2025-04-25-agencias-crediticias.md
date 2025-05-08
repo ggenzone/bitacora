@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/agencias-crediticias.png
   alt: Agencias crediticias y ratings
+description: "Un análisis del rol de las agencias crediticias y su influencia en los mercados financieros."
 ---
 
 > 🏦 Las agencias de calificación crediticia juegan un papel central en los mercados financieros, evaluando el riesgo de crédito de empresas, gobiernos y productos financieros. Sus ratings pueden abrir o cerrar el acceso al financiamiento global.

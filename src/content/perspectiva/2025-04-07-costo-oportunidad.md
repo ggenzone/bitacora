@@ -6,6 +6,7 @@ tags: [microeconomía, decisiones, finanzas personales, costo de oportunidad]
 image:
   path: ../../assets/img/posts/costo-oportunidad.jpg
   alt: Costo de oportunidad
+description: "Concepto de costo de oportunidad y su relevancia en la toma de decisiones económicas."
 ---
 
 ## ¿Qué es el costo de oportunidad?

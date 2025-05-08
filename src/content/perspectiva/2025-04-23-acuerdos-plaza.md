@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/acuerdos-plaza.png
   alt: Acuerdos Plaza
+description: "Explora los Acuerdos Plaza y su impacto en el sistema financiero internacional."
 ---
 
 > 🏦 En 1985, cinco de las mayores economías del mundo firmaron un acuerdo que cambiaría el rumbo del sistema financiero internacional. Los Acuerdos Plaza marcaron un antes y un después en la gestión de los tipos de cambio y la hegemonía del dólar.

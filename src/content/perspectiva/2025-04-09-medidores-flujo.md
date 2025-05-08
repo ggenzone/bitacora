@@ -7,6 +7,7 @@ math: true
 image:
   path: ../../assets/img/posts/medidores-flujo.webp  
   alt: Medidores de flujo
+description: "Descubre cómo la TIR y el VAN ayudan a evaluar la rentabilidad y viabilidad de proyectos de inversión."
 ---
 
 ## Evaluación de proyectos: ¿qué son la TIR y el VAN?

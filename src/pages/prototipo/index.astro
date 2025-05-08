@@ -1,6 +1,6 @@
 ---
 import PageLayout from '../../layouts/page.astro';
-import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import BlogPostPreview from "../../components/blog/Preview.astro";
 import { latestPosts } from "../../utils/content";
 
 const pageTitle = "Prototipo";
@@ -10,7 +10,7 @@ const posts = await latestPosts("prototipo");
 ---
 <PageLayout title={pageTitle}>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-1 xl:grid-cols-2">    
-        {posts.map(post => 
+        {posts.filter(a => a.visible).map(post => 
             <BlogPostPreview post={post} url={`/bitacora/prototipo/${post.id}`} />
         )}
     </div>

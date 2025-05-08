@@ -6,6 +6,7 @@ tags: [Banco Mundial, Bretton Woods, desarrollo económico]
 image:
   path: ../../assets/img/posts/banco-mundial.png
   alt: Banco Mundial
+description: "Un análisis del Banco Mundial, su rol en el desarrollo global y los desafíos que enfrenta."
 ---
 
 

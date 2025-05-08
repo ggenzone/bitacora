@@ -7,6 +7,7 @@ math: true
 image:
   path: ../../assets/img/posts/medidores-flujo.webp  
   alt: Flujos de Caja
+description: "Introducción a los flujos de caja y su importancia en la gestión financiera."
 ---
 
 > 🧭 Este post introduce los principales tipos de flujos de caja en finanzas corporativas, con foco en el **flujo de caja libre (FCF)** como base del análisis de valor. También se presenta el método de **Descuento de Flujos de Caja (DCF)**.

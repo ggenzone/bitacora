@@ -31,7 +31,7 @@ const { post, url } = Astro.props;
 <a href={url}>
     <div class="max-w-sm w-full lg:max-w-full h-full max-h-[200px] lg:flex border border-gray-200 rounded-lg shadow-sm dark:border-zinc-700">
         <div class="hidden lg:block h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-            <Image src={post.data.image.path} class="w-full h-full object-cover object-center" alt={post.data.image.alt}/>
+            {post.data.image && (<Image src={post.data.image.path} class="w-full h-full object-cover object-center" alt={post.data.image.alt}/>)}
         </div>
         <div class="p-4 flex flex-col justify-between leading-normal">
             <div class="mb-8">
@@ -41,7 +41,7 @@ const { post, url } = Astro.props;
                 </p>
             <div class="text-gray-900 font-semibold text-sm mb-2 dark:text-white">{post.data.title}</div>
             <p class="text-gray-700 text-sm text-gray-500 dark:text-white">
-            {truncate(post.body || '', 100)}
+            {post.data.description}
             </p>
             </div>
             <p class="flex text-sm justify-end text-gray-600 dark:text-white">{displayDate(post.data.date)}</p>

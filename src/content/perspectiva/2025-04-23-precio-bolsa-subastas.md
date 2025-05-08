@@ -7,6 +7,7 @@ math: false
 image:
   path: ../../assets/img/posts/precio-bolsa-subastas.png
   alt: Cálculo del precio en bolsa y subastas
+description: "Un análisis del precio de bolsa y el sistema de subastas en los mercados financieros."
 ---
 
 > 🏛️ El precio de una acción en la bolsa no es arbitrario: surge del encuentro entre oferta y demanda, y en momentos clave se determina mediante subastas. Descubre cómo funciona este proceso fundamental para los mercados financieros.

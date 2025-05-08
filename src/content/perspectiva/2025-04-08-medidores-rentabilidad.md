@@ -7,6 +7,7 @@ math: true
 image:
   path: ../../assets/img/posts/medidores-rentabilidad.jpg
   alt: Medidores de rentabilidad
+description: "Explora los principales indicadores de rentabilidad como ROI, ROE, ROA y CAGR, y su importancia en las finanzas."
 ---
 
 

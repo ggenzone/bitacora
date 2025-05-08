@@ -6,6 +6,7 @@ tags: [triffin, bretton woods, patrón oro, sistema monetario, nixon shock]
 image:
   path: ../../assets/img/posts/triffin-header.png
   alt: Gold and the Dollar Crisis
+description: "Explora el dilema de Triffin y su impacto en los sistemas monetarios internacionales."
 ---
 
 ## Introducción

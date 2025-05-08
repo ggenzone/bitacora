@@ -6,6 +6,7 @@ tags: [ahorro, inversión, especulación, riesgo, liquidez, rentabilidad]
 image:
   path: ../../assets/img/posts/triangulo-inversion.png
   alt: Triángulo de inversión
+description: "Análisis de la relación entre ahorro, inversión y especulación en la economía."
 ---
 
 ## Ahorro, inversión y especulación: ¿en qué se diferencian?

@@ -7,6 +7,7 @@ math: true
 image:
   path: ../../assets/img/posts/ciclos-economicos.png
   alt: Ciclos económicos
+description: "Entiende los ciclos económicos y los indicadores clave para analizar la economía."
 ---
 
 > 📈 La economía no crece de forma lineal. Avanza en ciclos, con fases de expansión, recesión y recuperación. Entender estos movimientos es clave para analizar la situación macroeconómica, tomar decisiones de inversión o diseñar políticas públicas.

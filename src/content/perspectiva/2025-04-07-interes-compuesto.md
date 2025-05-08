@@ -6,6 +6,7 @@ tags: [interés compuesto, capitalización, finanzas personales, ahorro]
 image:
   path: ../../assets/img/posts/interes-compuesto.jpeg
   alt: Interés compuesto
+description: "Descubre cómo funciona el interés compuesto y su impacto en las finanzas personales."
 ---
 
 ## ¿Qué es el interés compuesto?
