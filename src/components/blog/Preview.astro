@@ -30,24 +30,19 @@ const { post, url } = Astro.props;
 
 
 <a href={url}>
-<div class="w-full bg-[var(--sidebar)] rounded-xl overflow-hidden  not-prose  dark:border-[rgb(44, 45, 45)] dark:shadow-[var(--card-shadow)]">
+<div class="w-full rounded-xl overflow-hidden  not-prose    bg-[var(--card-bg)] border-[var(--bs-body-bg)] bg-[var(--card-bg)] hover:bg-[var(--card-hover-bg)] shadow-[var(--card-shadow)] ">
     <div class="md:flex">
         <div class="md:shrink-0 md:hidden">
             {post.data.image && (<Image class="h-48 w-full object-cover md:h-full md:w-48" src={post.data.image.path} alt={post.data.image.alt} />)}
         </div>
         <div class="p-8">
-            <p class="text-sm text-gray-600 flex items-center text-blue-500 mb-2 dark:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10.5 17a1 1 0 0 1-.71-.29a1 1 0 0 1 0-1.42L13.1 12L9.92 8.69a1 1 0 0 1 0-1.41a1 1 0 0 1 1.42 0l3.86 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-.7.32"/></svg>
-                    {post.data.categories[0]} / {post.data.categories[1]}
-            </p>
-            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
-            <a href={url} class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+            <a href={url} class="block mt-1 text-lg leading-tight font-regular text-[var(--heading-color)] mb-2">
                 {post.data.title}
             </a>
-            <p class="mt-2 text-gray-700 text-sm text-gray-500 dark:text-white">
+            <p class="mt-2  mb-2 text-[var(--text-muted-color)]">
                 {post.data.description}
             </p>
-            <p class="flex text-sm justify-end text-gray-600 dark:text-white">{displayDate(post.data.date)}</p>
+            <p class="flex text-sm justify-end text-[var(--text-muted-color)]">{displayDate(post.data.date)}</p>
         </div>
             <div class="md:shrink-0 hidden md:block">
             {post.data.image && (<Image class="h-48 w-full object-cover md:h-full md:w-48" src={post.data.image.path} alt={post.data.image.alt} />)}
