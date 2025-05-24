@@ -61,13 +61,9 @@ const lineStyle = 'border-x border-x-(--pattern-fg) bg-[image:repeating-linear-g
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css">
 
   </head>
-  <body class={`antialiased dark:bg-zinc-900 ${lineStyle}`}>
+  <body class={`antialiased bg-[var(--main-bg)] ${lineStyle}`}>
     <div class="mx-auto">
-      <Navigation />
-      <div class="min-h-dvh">
-        <slot />
-      </div>
-      <Footer />
+      <slot />
     </div>
   </body>
 </html>

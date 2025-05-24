@@ -6,7 +6,7 @@ type Collections = keyof DataEntryMap
 
 export const latestPosts = async (collection: Collections) => (
   await getCollection(collection, ({ data }) => {
-    return true
+    return data.visible !== false
   })
 ).sort(
   (a, b) =>

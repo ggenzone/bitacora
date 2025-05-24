@@ -1,8 +1,8 @@
 ---
-import MarkdownPostLayout from '../../layouts/post.astro';
+import BlogLayout from '../../layouts/blog.astro';
 import { getCollection, render } from 'astro:content';
 import { Debug } from 'astro:components';
-import { sidebar } from '../../data/prototipo-menu.ts'
+import { blog } from '../../data/prototipo-blog.ts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('prototipo');
@@ -13,14 +13,13 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const frontmatter = post.data;
 ---
 
-<MarkdownPostLayout 
+<BlogLayout 
   frontmatter={post.data}
   headings={post.rendered.metadata.headings} 
   url={`/bitacora/prototipo/${post.id}`}
-  sidebar={sidebar}
+  blog={blog}
 >
   <Content />
-</MarkdownPostLayout>
+</BlogLayout>

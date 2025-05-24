@@ -1,17 +1,19 @@
 ---
-import PageLayout from '../../layouts/page.astro';
+import BlogLayout from '../../layouts/blog.astro';
 import BlogPostPreview from "../../components/blog/Preview.astro";
 import { latestPosts } from "../../utils/content";
-
-const pageTitle = "Herbrand Universe";
+import { blog } from '../../data/herbrand-blog.ts';
 
 const posts = await latestPosts("herbrand");
 
 ---
-<PageLayout title={pageTitle}>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-1 xl:grid-cols-2">    
+<BlogLayout
+    index={true}
+    blog={blog}
+>
+    <div class="grid grid-cols-1 gap-8 ">    
         {posts.map(post => 
             <BlogPostPreview post={post} url={`/bitacora/herbrand/${post.id}`} />
         )}
     </div>
-</PageLayout>
+</BlogLayout>

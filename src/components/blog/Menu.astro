@@ -1,26 +1,26 @@
 ---
-const { menu } = Astro.props;
+import ThemeIcon from '../ThemeIcon.astro';
+import type { Blog } from '../data/blog';
+const { blog } = Astro.props as { blog: Blog };
 ---
-<!-- Left navigation -->
+<aside class="sticky top-0 w-2xs bottom-0 h-screen left-0 flex flex-col justify-between p-6 bg-[var(--sidebar-bg)] border-r border-[var(--sidebar-border-color)]">
+    <div>
+        <header class="mb-4 dark:text-white border-b border-[var(--sidebar-border-color)] pb-4">
+            {blog.title}
+        </header>
 
-<div class="absolute inset-0">
-    <div class="sticky top-14.25 bottom-0 left-0 h-full max-h-[calc(100dvh-(var(--spacing)*14.25))] w-2xs overflow-y-auto p-6">
-    <div class="">
         <nav class="flex flex-col gap-8"><ul class="flex flex-col gap-2">
-        <li>
-            <a class="group inline-flex items-center gap-3 text-base/8 text-gray-600 sm:text-sm/7 dark:text-gray-300 **:data-outline:stroke-gray-400 dark:**:data-outline:stroke-gray-500 **:[svg]:first:size-5 **:[svg]:first:sm:size-4 hover:text-gray-950 hover:**:data-highlight:fill-gray-300 hover:**:data-outline:stroke-gray-950 dark:hover:text-white dark:hover:**:data-highlight:fill-gray-600 dark:hover:**:data-outline:stroke-white aria-[current]:font-semibold aria-[current]:text-gray-950 aria-[current]:**:data-highlight:fill-gray-300 aria-[current]:**:data-outline:stroke-gray-950 dark:aria-[current]:text-white dark:aria-[current]:**:data-highlight:fill-gray-600 dark:aria-[current]:**:data-outline:stroke-white" aria-current="page" href="/docs/installation"><svg viewBox="0 0 16 16" fill="none"><path data-highlight="true" d="M3.5 1.5C2.4264 1.5 1.40926 1.74169 0.5 2.17363V13.1736C1.40926 12.7417 2.4264 12.5 3.5 12.5C5.21352 12.5 6.78323 13.1157 8 14.1379V3.13789C6.78323 2.11568 5.21352 1.5 3.5 1.5Z"></path><path data-outline="true" d="M8 14.1379C9.21677 13.1157 10.7865 12.5 12.5 12.5C13.5736 12.5 14.5907 12.7417 15.5 13.1736V2.17363C14.5907 1.74169 13.5736 1.5 12.5 1.5C10.7865 1.5 9.21677 2.11568 8 3.13789M8 14.1379C6.78323 13.1157 5.21352 12.5 3.5 12.5C2.4264 12.5 1.40926 12.7417 0.5 13.1736V2.17363C1.40926 1.74169 2.4264 1.5 3.5 1.5C5.21352 1.5 6.78323 2.11568 8 3.13789M8 14.1379V3.13789"></path></svg>
-            Documentation
-            </a>
-        </li>
-        {menu.map((m) => (
-            <li>
-                <a class="group inline-flex items-center gap-3 text-base/8 text-gray-600 sm:text-sm/7 dark:text-gray-300  aria-current="page" href={m.href}>
-                {m.label}
-                </a>
-            </li>
-        ))}
+            {blog.menu.map((m) => (
+                <li>
+                    <a class="group inline-flex items-center gap-3 text-base/8 text-gray-600 sm:text-sm/7 dark:text-gray-300 **:data-outline:stroke-gray-400 dark:**:data-outline:stroke-gray-500 **:[svg]:first:size-5 **:[svg]:first:sm:size-4 hover:text-gray-950 hover:**:data-highlight:fill-gray-300 hover:**:data-outline:stroke-gray-950 dark:hover:text-white dark:hover:**:data-highlight:fill-gray-600 dark:hover:**:data-outline:stroke-white aria-[current]:font-semibold aria-[current]:text-gray-950 aria-[current]:**:data-highlight:fill-gray-300 aria-[current]:**:data-outline:stroke-gray-950 dark:aria-[current]:text-white dark:aria-[current]:**:data-highlight:fill-gray-600 dark:aria-[current]:**:data-outline:stroke-white"  aria-current={Astro.url.pathname === m.href ? "page" : undefined} href={m.href}>
+                    <svg viewBox="0 0 16 16" fill="none"><path data-highlight="true" d="M3.5 1.5C2.4264 1.5 1.40926 1.74169 0.5 2.17363V13.1736C1.40926 12.7417 2.4264 12.5 3.5 12.5C5.21352 12.5 6.78323 13.1157 8 14.1379V3.13789C6.78323 2.11568 5.21352 1.5 3.5 1.5Z"></path><path data-outline="true" d="M8 14.1379C9.21677 13.1157 10.7865 12.5 12.5 12.5C13.5736 12.5 14.5907 12.7417 15.5 13.1736V2.17363C14.5907 1.74169 13.5736 1.5 12.5 1.5C10.7865 1.5 9.21677 2.11568 8 3.13789M8 14.1379C6.78323 13.1157 5.21352 12.5 3.5 12.5C2.4264 12.5 1.40926 12.7417 0.5 13.1736V2.17363C1.40926 1.74169 2.4264 1.5 3.5 1.5C5.21352 1.5 6.78323 2.11568 8 3.13789M8 14.1379V3.13789"></path></svg>
+                    {m.label}
+                    </a>
+                </li>
+            ))}
         </nav>
     </div>
+    <div class="flex flex-col gap-2">
+        <ThemeIcon />
     </div>
-</div>
-<!-- Left navigation -->
+</aside>

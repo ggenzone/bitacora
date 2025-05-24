@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+
+import MainLayout from './main.astro';
+import BlogMenu from "../components/blog/Menu.astro";
+import BlogToc from "../components/blog/Toc.astro";
+import BlogHead from "../components/blog/Head.astro";
+import BlogBody from "../components/blog/Body.astro";
+
+import type { MarkdownLayoutProps } from 'astro';
+import type { Blog } from '../data/blog';
+
+
+// Now, `frontmatter`, `url`, and other Markdown layout properties
+// are accessible with type safety
+const { frontmatter, url, headings, sidebar, blog, index = false } = Astro.props as MarkdownLayoutProps & { blog: Blog, index?: boolean  };
+const title = index ? blog.title : (frontmatter?.title || blog.title) 
+
+---
+<MainLayout title={title}>
+
+<div class="min-h-dvh">
+    <div class="grid min-h-dvh grid-cols-1 lg:grid-cols-[var(--container-2xs)_minmax(0,1fr)] xl:grid-cols-[var(--container-2xs)_minmax(0,1fr)] bg-[var(--main-bg)] ">
+      
+      
+      <div class="relative col-start-1 row-span-full row-start-1 max-lg:hidden">
+        <BlogMenu blog={blog} />
+      </div>
+
+      
+{/*
+      <div class="col-start-1 col-span-2 row-span-5 row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10"></div>
+      */}
+
+      <div class="relative row-start-1 grid grid-cols-subgrid lg:col-start-2">
+        <div class="mx-auto grid w-full max-w-2xl grid-cols-1 gap-10 xl:max-w-5xl xl:grid-cols-[minmax(0,1fr)_var(--container-2xs)]">
+          
+          
+          <div class="px-4 pt-10 pb-24 sm:px-6 xl:pr-0">
+            {!index && frontmatter && (<BlogHead frontmatter={frontmatter} />)}
+            <BlogBody>
+              <slot>
+            </BlogBody>
+          </div>
+
+          {!index && headings && (<BlogToc headings={headings} url={url} />) }
+      </div>
+
+    </div>
+</div>
+</MainLayout>

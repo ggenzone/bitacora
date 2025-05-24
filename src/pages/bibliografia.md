@@ -31,10 +31,12 @@ tags: [bretton woods, fmi, banco mundial, patrón oro, sistema monetario]
 - **De cero a uno** - Peter Thiel - [[Link]](https://www.goodreads.com/book/show/25296012-de-cero-a-uno)
 - **El cisne negro** - Nassim Nicholas Taleb - [[Link]](https://www.goodreads.com/book/show/9684064-el-cisne-negro)
 - **El malestar en la globalización** - Joseph E. Stiglitz - [[Link]](https://www.goodreads.com/book/show/87657.El_malestar_en_la_globalizaci_n)
+- **La psicología del dinero** - Morgan Housel - [[Link]](https://www.goodreads.com/book/show/61338803-la-psicolog-a-del-dinero)
 
 ## Energia
 - **El futuro de Europa** - Antonio Turiel - [[Link]](https://www.goodreads.com/book/show/218169167-el-futuro-de-europa)
 - **2050. Por qué un mundo sin emisiones es casi imposible** - Vaclav Smil - [[Link]](https://www.goodreads.com/book/show/220605881-2050-por-qu-un-mundo-sin-emisiones-es-casi-imposible)
+- **Energías renovables** - Nick Jelley - [[Link]](https://www.goodreads.com/book/show/95962629-energ-as-renovables)
 
 ## Geopolitica
 - **El mundo está en venta** - Javier Blas, Jack Farchy - [[Link]](https://www.goodreads.com/book/show/61163197-el-mundo-est-en-venta)
