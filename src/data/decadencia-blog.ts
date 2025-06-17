@@ -7,8 +7,8 @@ export const blog: Blog = {
     image: "/bitacora/decadencia/decadencia.png",
     menu: [
         {
-        label: "Home",
-        href: "/bitacora/decadencia",
+            label: "Home",
+            href: "/bitacora/decadencia",
         }
     ]
 };

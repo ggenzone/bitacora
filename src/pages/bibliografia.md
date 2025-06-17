@@ -32,6 +32,7 @@ tags: [bretton woods, fmi, banco mundial, patrón oro, sistema monetario]
 - **El cisne negro** - Nassim Nicholas Taleb - [[Link]](https://www.goodreads.com/book/show/9684064-el-cisne-negro)
 - **El malestar en la globalización** - Joseph E. Stiglitz - [[Link]](https://www.goodreads.com/book/show/87657.El_malestar_en_la_globalizaci_n)
 - **La psicología del dinero** - Morgan Housel - [[Link]](https://www.goodreads.com/book/show/61338803-la-psicolog-a-del-dinero)
+- **Pensar rápido, pensar despacio** -  Daniel Kahneman - [[Link]](https://www.goodreads.com/book/show/38228086-pensar-r-pido-pensar-despacio)
 
 ## Energia
 - **El futuro de Europa** - Antonio Turiel - [[Link]](https://www.goodreads.com/book/show/218169167-el-futuro-de-europa)
