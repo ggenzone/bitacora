@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/post.astro
+layout: ../layouts/page.astro
 title:  "Bibliografia"
 date:   2025-04-05 10:00:00 +0000
 categories: [economía, historia monetaria]
